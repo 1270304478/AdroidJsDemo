@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+    // 无参方法
+    function actionFromNative() {
+        document.getElementById("log_msg").innerHTML += "<br\>java调用js弹窗";
+    }
+
+     function actionFromJs(){
+     document.getElementById("log_msg").innerHTML += "<br\>js调用Android代码";
+
+     }
+    </script>
+</head>
+
+<body>
+<button  onClick="window.android.actionFromJs()">点击调用Android代码</button>
+
+<div id="log_msg">调用打印信息</div>
+</body>
+</html>
